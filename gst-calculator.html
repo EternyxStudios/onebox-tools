@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GST Calculator | ONEBOX</title>
+<meta name="description" content="Free GST calculator to calculate GST amount and total price for common GST rates.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eternyxstudios.github.io/onebox-tools/gst-calculator.html">
+<meta property="og:title" content="GST Calculator | ONEBOX">
+<meta property="og:description" content="Free GST calculator to calculate GST amount and total price for common GST rates.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eternyxstudios.github.io/onebox-tools/gst-calculator.html">
+<link rel="stylesheet" href="seo-tools.css">
+</head><body><div class="wrap">
+<header class="top"><a class="brand" href="./">ONEBOX</a><a class="back" href="./">← All Tools</a></header>
+<section class="hero"><h1>GST Calculator</h1><p>Free GST calculator to calculate GST amount and total price for common GST rates.</p></section>
+<section class="card"><div class="grid">
+<div><label>Amount (₹)</label><input id="amt" type="number" value="1000"></div>
+<div><label>GST rate (%)</label><select id="gst"><option>5</option><option>12</option><option selected>18</option><option>28</option></select></div></div>
+<button class="primary" onclick="calc()">Calculate GST</button><div class="result" id="out">Enter values and calculate.</div></section>
+<script>function calc(){const a=+document.getElementById('amt').value||0,g=+document.getElementById('gst').value||0,x=a*g/100;document.getElementById('out').textContent=`Base amount: ₹${a.toFixed(2)}\nGST: ₹${x.toFixed(2)}\nTotal: ₹${(a+x).toFixed(2)}`}</script>
+<section class="card content"><h2>About this tool</h2><p>This ONEBOX tool is made for quick everyday use and does not require an account.</p><h2>GST calculator use</h2><p>Choose a GST rate and enter the base amount to calculate tax and total price.</p></section>
+<footer>© 2026 ONEBOX · <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a> · <a href="./contact.html">Contact</a></footer>
+</div></body></html>

@@ -1,0 +1,7 @@
+Add these before </urlset> in your existing sitemap.xml:
+
+<url><loc>https://eternyxstudios.github.io/onebox-tools/emi-calculator.html</loc></url>
+<url><loc>https://eternyxstudios.github.io/onebox-tools/gst-calculator.html</loc></url>
+<url><loc>https://eternyxstudios.github.io/onebox-tools/age-calculator.html</loc></url>
+<url><loc>https://eternyxstudios.github.io/onebox-tools/image-compressor.html</loc></url>
+<url><loc>https://eternyxstudios.github.io/onebox-tools/pdf-merger.html</loc></url>
