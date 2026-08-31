@@ -250,3 +250,37 @@ function applyTheme(theme){
 }
 applyTheme(localStorage.getItem('onebox_theme')||'dark');
 if(themeBtnFixed){themeBtnFixed.onclick=()=>applyTheme(document.body.classList.contains('light')?'dark':'light');}
+// ===== FIX TOP TOOL SEARCH =====
+const fixedToolSearch = document.querySelector('#toolSearch');
+
+if (fixedToolSearch) {
+
+  fixedToolSearch.oninput = function () {
+
+    active = 'All';
+    renderCats();
+    renderTools(this.value);
+
+    if (this.value.trim().length > 0) {
+      document.querySelector('#tools')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  fixedToolSearch.onkeydown = function (e) {
+
+    if (e.key === 'Enter') {
+
+      active = 'All';
+      renderCats();
+      renderTools(this.value);
+
+      document.querySelector('#tools')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+}
