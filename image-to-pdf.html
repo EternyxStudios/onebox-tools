@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Image to PDF | ONEBOX</title>
+<meta name="description" content="Convert one or more JPG, PNG or WebP images into a downloadable PDF."><meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eternyxstudios.github.io/onebox-tools/image-to-pdf.html"><meta property="og:title" content="Image to PDF | ONEBOX">
+<meta property="og:description" content="Convert one or more JPG, PNG or WebP images into a downloadable PDF."><meta property="og:type" content="website"><meta property="og:url" content="https://eternyxstudios.github.io/onebox-tools/image-to-pdf.html">
+<link rel="stylesheet" href="seo-tools-2.css"></head><body><div class="wrap">
+<header class="top"><a class="brand" href="./">ONEBOX</a><a class="back" href="./">← All Tools</a></header>
+<section class="hero"><h1>Image to PDF</h1><p>Convert one or more JPG, PNG or WebP images into a downloadable PDF.</p></section><section class="card"><input id="f" type="file" accept="image/*" multiple><button class="primary" onclick="go()">Create PDF</button><div id="o" class="result">Select image files.</div><a id="dl" class="back" style="display:none;margin-top:12px" download="images.pdf">Download PDF</a><p class="note">Internet is required to load pdf-lib from jsDelivr.</p></section>
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script><script>async function go(){let fs=[...f.files];if(!fs.length)return;try{let pdf=await PDFLib.PDFDocument.create();for(let file of fs){let b=await file.arrayBuffer(),img=file.type.includes('png')?await pdf.embedPng(b):await pdf.embedJpg(b),pg=pdf.addPage([img.width,img.height]);pg.drawImage(img,{x:0,y:0,width:img.width,height:img.height})}let bytes=await pdf.save(),u=URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}));dl.href=u;dl.style.display='inline-block';o.textContent=`Created PDF from ${fs.length} image(s).`}catch(e){o.textContent='Could not create PDF: '+e.message}}</script>
+<section class="card content"><h2>About this tool</h2><p>Selected images are placed on PDF pages in the order chosen.</p></section>
+<footer>© 2026 ONEBOX · <a href="./about.html">About</a> · <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a> · <a href="./contact.html">Contact</a></footer>
+</div></body></html>

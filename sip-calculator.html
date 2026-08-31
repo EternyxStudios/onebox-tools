@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIP Calculator | ONEBOX</title>
+<meta name="description" content="Estimate the future value of monthly SIP investments with expected annual return and duration."><meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eternyxstudios.github.io/onebox-tools/sip-calculator.html"><meta property="og:title" content="SIP Calculator | ONEBOX">
+<meta property="og:description" content="Estimate the future value of monthly SIP investments with expected annual return and duration."><meta property="og:type" content="website"><meta property="og:url" content="https://eternyxstudios.github.io/onebox-tools/sip-calculator.html">
+<link rel="stylesheet" href="seo-tools-2.css"></head><body><div class="wrap">
+<header class="top"><a class="brand" href="./">ONEBOX</a><a class="back" href="./">← All Tools</a></header>
+<section class="hero"><h1>SIP Calculator</h1><p>Estimate the future value of monthly SIP investments with expected annual return and duration.</p></section><section class="card"><div class="grid3"><div><label>Monthly investment (₹)</label><input id="m" type="number" value="5000"></div><div><label>Expected return (% p.a.)</label><input id="r" type="number" value="12"></div><div><label>Years</label><input id="y" type="number" value="10"></div></div><button class="primary" onclick="c()">Calculate SIP</button><div id="o" class="result">Enter values and calculate.</div></section>
+<script>function c(){let m=+mEl.value,r=+rEl.value/1200,n=+yEl.value*12,v=r?m*((Math.pow(1+r,n)-1)/r)*(1+r):m*n;out.textContent=`Invested: ₹${(m*n).toFixed(2)}\nEstimated value: ₹${v.toFixed(2)}\nEstimated gain: ₹${(v-m*n).toFixed(2)}`};const mEl=document.getElementById('m'),rEl=document.getElementById('r'),yEl=document.getElementById('y'),out=document.getElementById('o')</script>
+<section class="card content"><h2>About this tool</h2><p>This calculator provides an estimate based on the return rate you enter; actual investment returns can vary.</p></section>
+<footer>© 2026 ONEBOX · <a href="./about.html">About</a> · <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a> · <a href="./contact.html">Contact</a></footer>
+</div></body></html>

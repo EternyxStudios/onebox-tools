@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interview Question Builder | ONEBOX</title>
+<meta name="description" content="Generate a practical interview question set for a selected role and skills."><meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eternyxstudios.github.io/onebox-tools/interview-question-builder.html"><meta property="og:title" content="Interview Question Builder | ONEBOX">
+<meta property="og:description" content="Generate a practical interview question set for a selected role and skills."><meta property="og:type" content="website"><meta property="og:url" content="https://eternyxstudios.github.io/onebox-tools/interview-question-builder.html">
+<link rel="stylesheet" href="seo-tools-2.css"></head><body><div class="wrap">
+<header class="top"><a class="brand" href="./">ONEBOX</a><a class="back" href="./">← All Tools</a></header>
+<section class="hero"><h1>Interview Question Builder</h1><p>Generate a practical interview question set for a selected role and skills.</p></section><section class="card"><div class="grid"><div><label>Role</label><input id="r" placeholder="Data Analyst"></div><div><label>Skills</label><input id="s" placeholder="SQL, Python, Power BI"></div></div><button class="primary" onclick="go()">Build Questions</button><div id="o" class="result"></div></section><script>function go(){let role=r.value||'this role',skills=(s.value||'your core skills').split(',').map(x=>x.trim());let q=[`Tell me about yourself and why you want to work as a ${role}.`,`Describe a project relevant to ${role}.`,`How do you validate the quality of your work?`,`Tell me about a difficult problem you solved.`,`How do you prioritize tasks under a deadline?`];skills.filter(Boolean).forEach(x=>q.push(`Explain how you have used ${x} in a practical task.`));o.textContent=q.map((x,i)=>`${i+1}. ${x}`).join('\n')}</script>
+<section class="card content"><h2>About this tool</h2><p>Questions are generated from a deterministic template using the role and skills you provide.</p></section>
+<footer>© 2026 ONEBOX · <a href="./about.html">About</a> · <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a> · <a href="./contact.html">Contact</a></footer>
+</div></body></html>

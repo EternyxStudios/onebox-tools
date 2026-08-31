@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Study Timer | ONEBOX</title>
+<meta name="description" content="Run a simple countdown study timer in your browser."><meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eternyxstudios.github.io/onebox-tools/study-timer.html"><meta property="og:title" content="Study Timer | ONEBOX">
+<meta property="og:description" content="Run a simple countdown study timer in your browser."><meta property="og:type" content="website"><meta property="og:url" content="https://eternyxstudios.github.io/onebox-tools/study-timer.html">
+<link rel="stylesheet" href="seo-tools-2.css"></head><body><div class="wrap">
+<header class="top"><a class="brand" href="./">ONEBOX</a><a class="back" href="./">← All Tools</a></header>
+<section class="hero"><h1>Study Timer</h1><p>Run a simple countdown study timer in your browser.</p></section><section class="card"><label>Minutes</label><input id="m" type="number" min="1" value="25"><div class="row"><button class="primary" onclick="start()">Start</button><button class="primary" onclick="stop()">Stop</button></div><div id="o" class="result">25:00</div></section><script>let id,left=1500;function draw(){o.textContent=`${String(Math.floor(left/60)).padStart(2,'0')}:${String(left%60).padStart(2,'0')}`}function start(){clearInterval(id);left=Math.max(1,+m.value)*60;draw();id=setInterval(()=>{left--;draw();if(left<=0){clearInterval(id);o.textContent='Time complete!'}},1000)}function stop(){clearInterval(id)}</script>
+<section class="card content"><h2>About this tool</h2><p>A lightweight browser countdown for focused study sessions.</p></section>
+<footer>© 2026 ONEBOX · <a href="./about.html">About</a> · <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a> · <a href="./contact.html">Contact</a></footer>
+</div></body></html>

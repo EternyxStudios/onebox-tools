@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Image Resizer | ONEBOX</title>
+<meta name="description" content="Resize an image to custom width and height directly in your browser."><meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eternyxstudios.github.io/onebox-tools/image-resizer.html"><meta property="og:title" content="Image Resizer | ONEBOX">
+<meta property="og:description" content="Resize an image to custom width and height directly in your browser."><meta property="og:type" content="website"><meta property="og:url" content="https://eternyxstudios.github.io/onebox-tools/image-resizer.html">
+<link rel="stylesheet" href="seo-tools-2.css"></head><body><div class="wrap">
+<header class="top"><a class="brand" href="./">ONEBOX</a><a class="back" href="./">← All Tools</a></header>
+<section class="hero"><h1>Image Resizer</h1><p>Resize an image to custom width and height directly in your browser.</p></section><section class="card"><div class="filebox"><input id="f" type="file" accept="image/*"></div><div class="grid"><div><label>Width (px)</label><input id="w" type="number" value="800"></div><div><label>Height (px)</label><input id="h" type="number" value="600"></div></div><button class="primary" onclick="go()">Resize</button><div id="o" class="result">Select an image.</div><img id="p" class="preview" style="display:none"><a id="dl" class="back" style="display:none;margin-top:12px" download="resized-image.png">Download image</a></section>
+<script>function go(){let f=document.getElementById('f').files[0];if(!f)return;let im=new Image();im.onload=()=>{let c=document.createElement('canvas');c.width=+w.value;c.height=+h.value;c.getContext('2d').drawImage(im,0,0,c.width,c.height);let u=c.toDataURL('image/png');p.src=u;p.style.display='block';dl.href=u;dl.style.display='inline-block';o.textContent=`New size: ${c.width} × ${c.height}px`};im.src=URL.createObjectURL(f)}</script>
+<section class="card content"><h2>About this tool</h2><p>The image is resized in the browser using a canvas and can then be downloaded as PNG.</p></section>
+<footer>© 2026 ONEBOX · <a href="./about.html">About</a> · <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a> · <a href="./contact.html">Contact</a></footer>
+</div></body></html>

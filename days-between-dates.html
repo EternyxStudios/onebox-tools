@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Days Between Dates Calculator | ONEBOX</title>
+<meta name="description" content="Calculate the number of days between two calendar dates."><meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eternyxstudios.github.io/onebox-tools/days-between-dates.html"><meta property="og:title" content="Days Between Dates Calculator | ONEBOX">
+<meta property="og:description" content="Calculate the number of days between two calendar dates."><meta property="og:type" content="website"><meta property="og:url" content="https://eternyxstudios.github.io/onebox-tools/days-between-dates.html">
+<link rel="stylesheet" href="seo-tools-2.css"></head><body><div class="wrap">
+<header class="top"><a class="brand" href="./">ONEBOX</a><a class="back" href="./">← All Tools</a></header>
+<section class="hero"><h1>Days Between Dates Calculator</h1><p>Calculate the number of days between two calendar dates.</p></section><section class="card"><div class="grid"><div><label>Start date</label><input id="a" type="date"></div><div><label>End date</label><input id="b" type="date"></div></div><button class="primary" onclick="go()">Calculate Days</button><div id="o" class="result"></div></section><script>function go(){let x=new Date(a.value+'T00:00:00'),y=new Date(b.value+'T00:00:00');o.textContent=(isNaN(x)||isNaN(y))?'Select both dates.':`Difference: ${Math.abs(Math.round((y-x)/86400000))} days`}</script>
+<section class="card content"><h2>About this tool</h2><p>Calculates the absolute calendar-day difference between the two selected dates.</p></section>
+<footer>© 2026 ONEBOX · <a href="./about.html">About</a> · <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a> · <a href="./contact.html">Contact</a></footer>
+</div></body></html>
